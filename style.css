@@ -3,6 +3,7 @@
     font-size: 50px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: left;
+    margin-top: 0px;
 }
 
 .heading h3{
@@ -13,5 +14,13 @@
     float: right;
     border: 2px peachpuff solid;
     font-size: 40px;
-    
+
+}
+
+h4{
+    line-height:2;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:white;
+    background-color: purple;
+    margin:0px;
 }

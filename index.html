@@ -20,11 +20,39 @@
             <br><br>
             <button id="play" class="btn btn-warning" onclick="startGame()">Play</button>
             <br><br>
+            <button id="restart" onclick="restart()" class="btn btn-success">Restart</button>
+            <br><br>
             <h3 id="status" class="btn btn-danger"></h3>
             <br><br>
             <div id="canvas"></div>
+
+            <h4>
+                Developed By - Aashritha K.
+            </h4>
+
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <div class="modal-body">
+                                <ol>
+                                    <li>Move your mouse/cursor up and down to control your paddle</li>
+                                    <li>Make sure the ball only hits your paddle and not the side by controlling the paddle</li>
+                                    <li>Speed will increase by each hit</li>
+                                    <li>See how fast you can go before the ball hits the side</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
         </center>
 
         <script src="main.js"></script>
+        
     </body>
 </html>
