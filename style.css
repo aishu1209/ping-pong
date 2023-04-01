@@ -24,3 +24,12 @@ h4{
     background-color: purple;
     margin:0px;
 }
+
+canvas{
+    border:peachpuff solid;
+}
+
+#cam{
+    margin-left: 50px;
+    margin-top: 5px;
+}

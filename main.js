@@ -24,10 +24,34 @@ var ball = {
 function setup(){
   var canvas =  createCanvas(700,600);
   canvas.parent('canvas');
+
+  video = createCapture(VIDEO);
+  video.size(300,500);
+  video.parent('cam');
+  
+
+  poseNet = ml5.poseNet(video,modelLoaded);
+
+poseNet.on('pose',gotPoses);
+
+
+
+
 }
 
+function modelLoaded(){
+  console.log("model has loaded");
+
+}
+
+function gotPoses(results){
+
+}
 
 function draw(){
+
+
+image(video,0,0,300,500);
 
  background(0); 
 
@@ -66,6 +90,9 @@ function draw(){
    
    //function move call which in very important
     move();
+
+
+  
 }
 
 
