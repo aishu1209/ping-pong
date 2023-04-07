@@ -21,12 +21,18 @@ var ball = {
     dy:3
 }
 
+
+wristX = 0;
+wristY = 0;
+score_rightWrist = 0;
+
+
 function setup(){
   var canvas =  createCanvas(700,600);
   canvas.parent('canvas');
 
   video = createCapture(VIDEO);
-  video.size(300,500);
+  video.size(500,700);
   video.parent('cam');
   
 
@@ -45,13 +51,26 @@ function modelLoaded(){
 }
 
 function gotPoses(results){
+  
+    if(results.length > 0){
+      wristX = results[0].pose.rightWrist.x;
+      wristY = results[0].pose.rightWrist.y;
+      score_rightWrist = results[0].pose.keypoints[10].score;
+      console.log(wristX + ", " + wristY);
+    }
+
 
 }
 
 function draw(){
 
 
-image(video,0,0,300,500);
+  image(video,0,0,500,700);
+
+  
+  fill('#FF0000');
+  stroke('#FF0000');
+    circle(wristX, wristY, 20);
 
  background(0); 
 
@@ -62,6 +81,7 @@ image(video,0,0,300,500);
  fill("black");
  stroke("black");
  rect(0,0,20,700);
+
  
    //funtion paddleInCanvas call 
    paddleInCanvas();
