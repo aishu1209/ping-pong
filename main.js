@@ -68,9 +68,7 @@ function draw(){
   image(video,0,0,500,700);
 
   
-  fill('#FF0000');
-  stroke('#FF0000');
-    circle(wristX, wristY, 20);
+
 
  background(0); 
 
